@@ -1,0 +1,64 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Employee/GetEmployees",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32801
+        }
+      ],
+      "UpstreamPathTemplate": "/GetAllEmployees",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Employee/GetEmployeeById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32801
+        }
+      ],
+      "UpstreamPathTemplate": "/GetEmployeeById/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Employee/AddEditEmployee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32801
+        }
+      ],
+      "UpstreamPathTemplate": "/AddEditEmployee",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Employee/DeleteEmployee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 32801
+        }
+      ],
+      "UpstreamPathTemplate": "/DeleteEmployee",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+
+
+
+
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:6609"
+  }
+}
